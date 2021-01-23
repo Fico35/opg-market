@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prijava</title>
+        <link rel="stylesheet" type="text/css" href="style/app-style.css" />
+        <meta name="viewport" value="initial-scale=1.0" />
+        <meta lang="HR" />
+    </head>
+    <body>
+        <nav class="navbar-top">
+            <a class="nav-main">OPG tržnica</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" id="input_username" name="username" placeholder="Korisničko ime" class="input" />
+                    <label for="username" id="label_error_username" class="error-text hidden">Nepoznato korisničko ime</label>
+                    <input type="password" id="input_password" name="password" placeholder="Lozinka" class="input" />
+                    <label for="password" id="label_error_password" class="error-text hidden">Pogrešna lozinka</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <button type="button" class="btn btn-primary" onclick="javascript:login()">Prijava</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <h4>Nemate korisnički račun? <a href="/register">Registrirajte se.</a></h4>
+                </div>
+            </div>
+        </div>
+        <script src="controller/functions.js"></script>
+        <script src="controller/login.js"></script>
+    </body>
+</html>

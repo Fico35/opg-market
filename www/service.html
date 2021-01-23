@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usluga</title>
+        <headers />
+    </head>
+    <body>
+        <navbar-top />
+        <div id="background_image" style="background-image: url('/img/lamborghini.png'); background-size: cover; background-position: center; opacity: 0.1; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: -1000;"></div>
+        <div class="container" id="service_list">
+            <div class="row">
+                <div class="col-2">
+                    <h2>Vaše ponude:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary" onclick="javascript:createService()"><i class="fa fa-plus"></i> Nova ponuda</button>
+                    <button type="button" class="btn btn-secondary" id="btn_edit" onclick="javascript:editService()"><i class="fa fa-edit"></i> Izmijeni</button>
+                    <button type="button" class="btn btn-red" id="btn_delete" onclick="javascript:deleteService()"><i class="fa fa-trash"></i> Obriši</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <table id="user_services">
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h2>Sve ponude:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <table id="all_services">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="service_edit" style="display:none;">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="hidden" id="input_method" />
+                    <input type="hidden" id="input_service_id" />
+                    <input type="text" id="input_name" placeholder="Naziv" class="input" />
+                    <textarea rows="5" id="input_description" placeholder="Opis" class="input"></textarea>
+                    <input type="number" id="input_cost" placeholder="Cijena (HRK)" class="input" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="button" class="btn btn-primary" value="Potvrdi" onclick="javascript:confirmService()" />
+                    <input type="button" class="btn btn-secondary" value="Odustani" onclick="javascript:cancelService()" />
+                </div>
+            </div>
+        </div>
+        <scripts />
+        <script src="controller/service.js"></script>
+    </body>
+</html>

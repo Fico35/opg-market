@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moj profil</title>
+        <headers />
+    </head>
+    <body>
+        <navbar-top />
+        <div class="container" id="vegetable_service_list">
+            <div class="row">
+                <div class="col-2">
+                    <h2>Vaše ponude povrća:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary" onclick="javascript:createVegetable()"><i class="fa fa-plus"></i> Nova ponuda</button>
+                    <button type="button" class="btn btn-secondary" id="btn_edit_vegetable" onclick="javascript:editVegetable()"><i class="fa fa-edit"></i> Izmijeni</button>
+                    <button type="button" class="btn btn-red" id="btn_delete_vegetable" onclick="javascript:deleteVegetable()"><i class="fa fa-trash"></i> Obriši</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <table id="user_vegetables">
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h2>Vaše ponude usluga:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary" onclick="javascript:createService()"><i class="fa fa-plus"></i> Nova ponuda</button>
+                    <button type="button" class="btn btn-secondary" id="btn_edit_service" onclick="javascript:editService()"><i class="fa fa-edit"></i> Izmijeni</button>
+                    <button type="button" class="btn btn-red" id="btn_delete_service" onclick="javascript:deleteService()"><i class="fa fa-trash"></i> Obriši</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <table id="user_services">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="vegetable_edit" style="display:none;">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="hidden" id="input_vegetable_method" />
+                    <input type="hidden" id="input_vegetable_id" />
+                    <input type="text" id="input_vegetable_name" placeholder="Naziv" class="input" />
+                    <input type="number" id="input_vegetable_amount" placeholder="Količina (kg)" class="input" />
+                    <input type="number" id="input_vegetable_cost" placeholder="Cijena (HRK)" class="input" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="button" class="btn btn-primary" value="Potvrdi" onclick="javascript:confirmVegetable()" />
+                    <input type="button" class="btn btn-secondary" value="Odustani" onclick="javascript:cancelVegetable()" />
+                </div>
+            </div>
+        </div>
+        <div class="container" id="service_edit" style="display:none;">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="hidden" id="input_service_method" />
+                    <input type="hidden" id="input_service_id" />
+                    <input type="text" id="input_service_name" placeholder="Naziv" class="input" />
+                    <textarea rows="5" id="input_service_description" placeholder="Opis" class="input"></textarea>
+                    <input type="number" id="input_service_cost" placeholder="Cijena (HRK)" class="input" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <input type="button" class="btn btn-primary" id="btn_confirm" value="Potvrdi" onclick="javascript:confirmService()" />
+                    <input type="button" class="btn btn-secondary" id="btn_cancel" value="Odustani" onclick="javascript:cancelService()" />
+                </div>
+            </div>
+        </div>
+        <scripts />
+        <script src="controller/profile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registracija</title>
+        <link rel="stylesheet" type="text/css" href="style/app-style.css" />
+        <meta name="viewport" value="initial-scale=1.0" />
+        <meta lang="HR" />
+    </head>
+    <body>
+        <nav class="navbar-top">
+            <a class="nav-main">OPG tržnica</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" id="input_username" name="username" placeholder="Korisničko ime" class="input" />
+                    <label for="username" id="label_error_username" class="error-text hidden">Korisničko ime zauzeto</label>
+                    <input type="password" id="input_password" name="password" placeholder="Lozinka" class="input" />
+                    <input type="text" id="input_opg_name" name="opg_name" placeholder="Ime OPG-a" class="input" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <button type="submit" class="btn btn-primary" onclick="javascript:register()">Registriraj se</button>
+                </div>
+            </div>
+        </div>
+        <script src="controller/functions.js"></script>
+        <script src="controller/register.js"></script>
+    </body>
+</html>
